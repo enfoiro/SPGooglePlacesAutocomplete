@@ -14,6 +14,7 @@
 @property (nonatomic, strong) NSString *placeId;
 @property (nonatomic) SPGooglePlacesAutocompletePlaceType type;
 @property (nonatomic, strong) NSArray* terms;
+@property (nonatomic, strong) NSArray* rawTypes;
 @end
 
 @implementation SPGooglePlacesAutocompletePlace
@@ -24,6 +25,7 @@
     place.name = placeDictionary[@"description"];
     place.placeId = placeDictionary[@"place_id"];
     place.type = SPPlaceTypeFromDictionary(placeDictionary);
+    place.rawTypes = [NSArray arrayWithArray:placeDictionary[@"types"]];
     NSMutableArray* terms = [NSMutableArray array];
     for (NSDictionary* term in [placeDictionary objectForKey:@"terms"])
         [terms addObject:term[@"value"]];

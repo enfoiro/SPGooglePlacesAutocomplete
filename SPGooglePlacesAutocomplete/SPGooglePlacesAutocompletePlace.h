@@ -42,6 +42,11 @@
 @property (nonatomic, strong, readonly) NSArray *terms;
 
 /*!
+ Contains raw types of this place
+ */
+@property (nonatomic, strong, readonly) NSArray *rawTypes;
+
+/*!
  Resolves the place to a CLPlacemark, issuing  Google Place Details request if needed.
  */
 - (void)resolveToPlacemark:(SPGooglePlacesPlacemarkResultBlock)block;

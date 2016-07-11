@@ -26,7 +26,7 @@ NSArray *SPGooglePlacesAutocompletePlaceTypeNames(void)
         [names insertObject:@"" atIndex:SPPlaceTypeAll];
 
         [names insertObject:@"geocode" atIndex:SPPlaceTypeGeocode];
-	[names insertObject:@"address" atIndex:SPPlaceTypeAddress];
+        [names insertObject:@"address" atIndex:SPPlaceTypeAddress];
         [names insertObject:@"establishment" atIndex:SPPlaceTypeEstablishment];
         [names insertObject:@"(regions)" atIndex:SPPlaceTypeRegions];
         [names insertObject:@"(cities)" atIndex:SPPlaceTypeCities];
